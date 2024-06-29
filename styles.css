@@ -1,0 +1,174 @@
+html{
+  --title-color: #070707; /* Warna teks utama */
+  --text-color: #000000; /* Warna teks sekunder */
+  background: linear-gradient(rgba(228, 226, 225, 0.9), rgb(113, 112, 112)); /* Latar belakang menggunakan gradien linear */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color); /* Latar belakang halaman */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Font untuk seluruh halaman */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  min-height: calc(100% - 40px);
+  padding: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid rgb(251, 250, 249);
+  box-shadow: 1x 50px 100px  #f7e4a8;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 10px;
+  font-size: 24px;
+  color: var(--title-color); /* Warna teks nama profil */
+}
+
+.summary {
+  color: var(--text-color); /* Warna teks ringkasan */
+  font-weight: 100;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  margin-top: 10px;
+}
+
+.about__title {
+  color: var(--text-color); /* Warna teks judul informasi tambahan */
+  font-weight: 600;
+}
+.about__list {
+  display: flex;
+  margin-left: 10px;
+  list-style: none;
+  font-weight: 100;
+}
+
+.about__list > li {
+  margin-right: 10px;
+}
+
+.about__list > li > a {
+  color: #0a0909; /* Warna teks untuk tautan */
+  transition: all .3s; /* Transisi saat tautan berubah */
+}
+
+.about__list > li:hover > a {
+  color: rgb(107, 146, 204); /* Warna teks tautan saat dihover */
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social-media__list > li {
+  margin: 0 10px;
+}
+
+.social-media__list > li > a {
+  font-size: 24px;
+  color: var(--text-color); /* Warna ikon media sosial */
+  transition: color 0.3s;
+}
+
+.social-media__list > li > a:hover {
+  color: rgb(85, 150, 190); /* Warna ikon saat dihover */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.link-box {
+  margin-bottom: 20px;
+  border: 5px solid rgb(108, 106, 103);
+  box-shadow: 5px 5px var(--title-color);
+  background: rgb(250, 247, 244);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Menengahkan kotak link */
+  padding: 10px; /* Berikan ruang di sekitar tautan */
+}
+
+.list-links {
+  display: flex; /* Menggunakan flexbox */
+  justify-content: center; /* Pusatkan elemen secara horizontal */
+  flex-wrap: wrap; /* Biarkan elemen berada dalam satu baris */
+  gap: 20px; /* Jarak antara kotak */
+  list-style: none;
+  margin: 20px;
+}
+
+.list-links > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px; /* Sesuaikan lebar sesuai kebutuhan */
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 5px var(--title-color);
+  cursor: pointer;
+  transition: all 0.3s;
+  background: rgba(45, 43, 43, 0.5);
+}
+
+.list-links > li > a {
+  text-decoration: none;
+  color: bisque; /* Warna teks untuk tautan */
+  font-weight: 700;
+  font-size: 20px;
+}
+.list-links > li:hover > a{
+  color: #170a0a;
+}
+
+.list-links > li:hover {
+  transform: translate(-5px, -5px); /* Efek pergeseran saat dihover */
+  background-color: rgba(80, 78, 78, 0.879); /* Warna latar belakang tautan saat dihover */
+}
+
+footer {
+  background: linear-gradient(#f3f4ef, #222120); /* Gradien latar belakang kaki halaman */
+  text-align: center; /* Pusatkan teks dalam kaki halaman */
+  padding: 20px 0; /* Padding atas dan bawah kaki halaman */
+  color:var(--title-color); /* Warna teks dalam kaki halaman */
+}
+
+@media screen and (max-width: 600px) {
+  .list-links {
+    width: 100%; /* Lebar kotak tautan saat lebar layar kurang dari atau sama dengan 600px */
+  }
+  .list-links > li {
+    width: 100%; /* Lebar tautan saat lebar layar kurang dari atau*/
+  }
+}
